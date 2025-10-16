@@ -679,3 +679,115 @@ html {
         transform: translateY(0);
     }
 }
+
+/* Стили для разделов картриджей и снюса */
+.cartridges-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.snus-section {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.cartridges-section .section-title,
+.snus-section .section-title {
+    color: white;
+}
+
+.cartridges-section .section-title::after,
+.snus-section .section-title::after {
+    background: white;
+}
+
+/* Стили для специфических характеристик */
+.liquid-nicotine {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.liquid-nicotine i {
+    color: #e74c3c;
+}
+
+/* Адаптивность для новых разделов */
+@media (max-width: 768px) {
+    .cartridges-section,
+    .snus-section {
+        padding: 60px 0;
+    }
+}
+
+/* Стили для секции выбора категории */
+.category-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 0;
+}
+
+.category-section .section-title {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.category-section .section-title::after {
+    background: white;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.category-icon {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.category-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Стили для скрытых селекторов */
+.form-group select {
+    transition: all 0.3s ease;
+}
+
+/* Адаптивность для категорий */
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .category-card {
+        padding: 1.5rem;
+    }
+}
