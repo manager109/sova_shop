@@ -46,7 +46,13 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h2 class="hero-title">Премиальные жидкости для вейпа</h2>
-            <p class="tg-contact">ПРЯМОЙ ЗАКАЗ ЧЕРЕЗ(TG): @manager_eli</p>
+            <div class="telegram-cta">
+            <div class="tg-badge">
+                <i class="fab fa-telegram"></i>
+                ПРЯМОЙ ЗАКАЗ ЧЕРЕЗ TG:
+            </div>
+            <div class="tg-username">@manager_eli</div>
+        </div>
             <p class="hero-subtitle">Откройте мир насыщенных вкусов и качественных аксессуаров</p>
         </div>
         <div class="hero-background"></div>
@@ -543,10 +549,10 @@
                 <!-- Жидкость 13 -->
                 <div class="liquid-card">
                     <div class="card-image">
-                        <img src="img/злая монашка.jfif" alt="Злая Мошанка" onerror="this.src='https://via.placeholder.com/300x300/2c3e50/ffffff?text=Злая+Мошанка'">
+                        <img src="img/злая монашка.jfif" alt="Злая Монашка" onerror="this.src='https://via.placeholder.com/300x300/2c3e50/ffffff?text=Злая+Монашка'">
                     </div>
                     <div class="card-content">
-                        <h3 class="liquid-name">Злая Мошанка</h3>
+                        <h3 class="liquid-name">Злая Монашка</h3>
                         <div class="form-group">
                             <label>Вкус:</label>
                             <select class="flavor-select">
@@ -584,7 +590,7 @@
                         <p class="liquid-nicotine"><i class="fas fa-bolt"></i> Никотин: 70mg</p>
                         <div class="card-footer">
                             <span class="price">14 Byn</span>
-                            <button class="order-button" data-product="Злая Мошанка" data-type="liquid">Заказать</button>
+                            <button class="order-button" data-product="Злая Монашка" data-type="liquid">Заказать</button>
                         </div>
                     </div>
                 </div>
@@ -887,7 +893,7 @@
                                 <option value="Rick and Morty Zombie">Rick and Morty Zombie</option>
                                 <option value="Rick and Morty Bad ICE">Rick and Morty Bad ICE</option>
                                 <option value="YUMMY">YUMMY</option>
-                                <option value="Злая Мошанка">Злая Мошанка</option>
+                                <option value="Злая Монашка">Злая Монашка</option>
                             </select>
                         </div>
                         
@@ -935,7 +941,7 @@
                 <p>🚭 Курение вредит Вашему здоровью 🚭</p>
                 <p>🔞 Страница строго 18+ 🔞</p>
                 <p> Посты созданы с целью информирования и не несёт в себе рекламного характера, либо стимуляции продаж.</p>
-                <p> По заказу сайта (tg): @flip4rever</p>
+            
             </div>
         </div>
     </footer>
@@ -1074,7 +1080,7 @@
                         "КИСЛОЕ ЯБЛОКО", "КИСЛЫЕ ЛЕСНЫЕ ЯГОДЫ", "КИСЛЫЙ АНАНАС", "КИСЛЫЙ ЛАЙМ", "КИСЛЫЙ СКИТЛС"
                     ]
                 },
-                "Злая Мошанка": {
+                "Злая Монашка": {
                     flavors: [
                         "ФРУКТОВЫЙ МАРМЕЛАД ЛЕД", "ФАНТА С КОЛОЙ", "МАЛИНОВОЕ ВАРЕНЬЕ", "КИСЛЫЙ ЧУПА ЧУПС С ХОЛОДОМ",
                         "ДИКАЯ МАЛИНА С ЧЕРНИКОЙ", "ПИНА КОЛАДА", "ЙОГУРТ С ПЕРСИКОМ И ЧЕРНИКОЙ", "ЯГОДНЫЙ МОРС",
@@ -1335,8 +1341,10 @@
 👤 *Telegram:* ${escapeMarkdown(data.username)}
 📦 *Тип товара:* ${escapeMarkdown(data.productType === 'liquid' ? 'Жидкость' : data.productType === 'cartridge' ? 'Картридж' : 'Снюс')}
 🛍️ *Товар:* ${escapeMarkdown(productName)}
-${data.flavor ? `🍓 *Вкус/Тип:* ${escapeMarkdown(data.flavor)}` : ''}
+${data.flavor ? `🍓 *Вкус/Тип:* ${escapeMarkdown(data.flavor).replace(/\\\./g, '.')}` : ''}
 ${data.message ? `📝 *Доп. информация:* ${escapeMarkdown(data.message)}` : ''}
+
+*для вставки:* ${escapeMarkdown(data.username)} - ${escapeMarkdown(productName)} - ${escapeMarkdown(data.flavor).replace(/\\\./g, '.')}
 
 ⚡ *Срочно связаться!*`;
 
