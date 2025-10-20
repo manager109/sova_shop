@@ -1344,7 +1344,7 @@
 ${data.flavor ? `🍓 *Вкус/Тип:* ${escapeMarkdown(data.flavor).replace(/\\\./g, '.')}` : ''}
 ${data.message ? `📝 *Доп. информация:* ${escapeMarkdown(data.message)}` : ''}
 
-*для вставки:* ${escapeMarkdown(data.username)} - ${escapeMarkdown(productName)} - ${escapeMarkdown(data.flavor).replace(/\\\./g, '.')}
+*для вставки:* \`${escapeMarkdown(data.username)} - ${escapeMarkdown(productName)} - ${escapeMarkdown(data.flavor).replace(/\\\./g, '.')}\`
 
 ⚡ *Срочно связаться!*`;
 
@@ -1450,3 +1450,4 @@ ${data.message ? `📝 *Доп. информация:* ${escapeMarkdown(data.mes
     </script>
 </body>
 </html>
+
